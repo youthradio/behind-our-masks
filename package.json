@@ -1,0 +1,51 @@
+{
+  "name": "BehindOurMask",
+  "version": "1.0.0",
+  "description": "My first-class Nuxt.js project",
+  "author": "Radames Ajna",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt generate && rm -rf _site/* && cp -R dist/ _site/",
+    "publish-ghpages": "nuxt generate",
+    "fetch-data": "node scripts/getdata.js",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "worktree": "git checkout --orphan gh-pages && git reset --hard && git commit --allow-empty -m 'Init' && git checkout master && git worktree add _site gh-pages",
+    "gh-pages": "yarn export && cd _site && git add . && git commit --amend --no-edit && git push  origin gh-pages --force",
+    "production": "BASE_URL_PRODUCTION=/ yarn publish-ghpages && rm -rf _production/* && cp -R dist/ _production/"
+  },
+  "dependencies": {
+    "@nuxtjs/google-gtag": "^1.0.4",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "d3-array": "^2.9.1",
+    "d3-drag": "^2.0.0",
+    "d3-scale": "^3.2.3",
+    "d3-selection": "^2.0.0",
+    "lazysizes": "^5.2.2",
+    "nuxt": "^2.14.11",
+    "plyr": "^3.6.3",
+    "vue-mailchimp-subscribe": "^1.1.0",
+    "vue-plyr": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/runtime-corejs2": "^7.12.5",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.1",
+    "babel-eslint": "^10.1.0",
+    "core-js": "3.8.1",
+    "dompurify": "^2.2.3",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.2.0",
+    "gootenberg": "^1.4.3",
+    "jsdom": "^16.2.2",
+    "marked": "^1.2.6",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sass-loader": "^10.1.0",
+    "tachyons-sass": "^4.9.5"
+  }
+}
