@@ -29,7 +29,7 @@ jobs:
       - run: yarn install --frozen-lockfile      
       - name: Rebuild for Production
         env:
-          BASE_URL_PRODUCTION: /behindourmask
+          BASE_URL_PRODUCTION: /behind-our-mask
         run: yarn publish-ghpages
 
       - name: Deploy Production
@@ -50,5 +50,5 @@ jobs:
           key: ${{ secrets.key }}
           port: ${{ secrets.PORT }}
           script: |
-            cd static/behindourmask
+            cd static/behind-our-mask
             git fetch && git reset --hard FETCH_HEAD && git clean -df

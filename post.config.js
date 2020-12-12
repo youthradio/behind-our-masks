@@ -1,5 +1,5 @@
 module.exports = {
-  baseURL: process.env.BASE_URL_PRODUCTION || '/BehindOurMask',
+  baseURL: process.env.BASE_URL_PRODUCTION || '/behind-our-mask',
   title: 'Behind Our Mask',
   author: 'Static Author',
   publishDate: 'April. 14, 2020',
