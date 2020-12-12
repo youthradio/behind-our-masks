@@ -1,4 +1,3 @@
-import ArticleData from './data/data.json'
 import POSTCONFIG from './post.config'
 
 export default {
@@ -7,8 +6,6 @@ export default {
   env: {
     baseUrl: POSTCONFIG.baseURL || 'http://localhost:3000',
   },
-  mode: 'universal',
-
   /*
    ** Headers of the page
    */
@@ -109,7 +106,7 @@ export default {
       },
       {
         href:
-          'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap',
+          'https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap',
         rel: 'preload stylesheet',
         as: 'style',
         onload: "this.onload=null;this.rel='stylesheet'",
@@ -173,14 +170,8 @@ export default {
       }
     },
   },
-  generate: {
-    routes: [
-      ArticleData.bios.map((e) => `contribuitor/${e.authorslug}`),
-      ArticleData.stories.map((e) => `story/${e.slug}`),
-    ].flat(),
-  },
   sitemap: {
-    hostname: 'https://youngamericaspeaksup.org/',
+    hostname: 'https://www.behindourmask.org',
   },
   // server: {
   //   https: {

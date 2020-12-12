@@ -6,62 +6,27 @@
         ref="flourishes"
         class="absolute flex flex-column justify-around z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
       />
-      <h1 id="stories" class="mw8 f3 lh-title center ph3 blue ttu mt4">
-        Stories
-      </h1>
-      <HorizontalContainer
-        :articles="featured"
-        class="ph3 relative z-1"
-        @toggleBioModalSlug="(authorslug) => toggleBioModalSlug(authorslug)"
-      />
       <section class="mw8 center ph3 relative z-1 mt2">
         <template v-for="article in latest">
           <article :key="article.slug" class="pb4">
             <div class="flex flex-column flex-row-ns">
-              <div class="pr3-ns mb4 mb0-ns w-30-ns">
-                <nuxt-link
-                  :title="article.title"
-                  :to="{ path: `story/${article.slug}` }"
-                  class="link db dim black"
-                >
-                  <img
-                    :data-src="article.featureImageSmall"
-                    class="db lazyload"
-                    src="blankfeature.jpg"
-                    loading="lazy"
-                    style="object-fit: cover"
-                    alt="Photo of a dimly lit room with a computer interface terminal."
-                  />
-                </nuxt-link>
+              <div class="w-30-ns pr2-ns">
+                <h2
+                  class="orange mv0 lh-title f4 f2-ns"
+                  v-html="article.title"
+                ></h2>
+
+                <h3 class="black lh-title mv1 f5 f4-ns">
+                  {{ article.author }}
+                </h3>
               </div>
-              <div class="w-70-ns pl3-ns">
-                <nuxt-link
-                  :title="article.title"
-                  :to="{ path: `story/${article.slug}` }"
-                  class="link db blue underline-hover"
-                >
-                  <h2
-                    class="blue serif mv0 lh-title f4 f3-ns"
-                    v-html="article.title"
-                  ></h2>
-                </nuxt-link>
-                <a
-                  :title="`${article.author} Bio`"
-                  class="pointer link db blue dim black"
-                  @click.prevent="toggleBioModalSlug(article.authorslug)"
-                >
-                  <h3 class="dark-red lh-title mv1 f5 f4-ns">
-                    {{ article.author }} |
-                    <span class="ttc normal"> {{ article.format }}</span>
-                  </h3>
-                </a>
-                <nuxt-link
-                  :title="article.summary"
-                  :to="{ path: `story/${article.slug}` }"
-                  class="link db dim black"
-                >
-                  <p class="f4-l lh-copy mv0">{{ article.summary }}</p>
-                </nuxt-link>
+              <div class="w-70-ns pl2-ns">
+                <main class="center">
+                  <component
+                    :is="articleFormatComponent(article)"
+                    v-bind="{ article: article }"
+                  />
+                </main>
               </div>
             </div>
           </article>
@@ -161,21 +126,26 @@ import ArticleData from '~/data/data.json'
 import mixinMethods from '~/utils/mixinMethods'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
-import HorizontalContainer from '~/components/HorizontalContainer.vue'
+import ArticleText from '~/components/ArticleText.vue'
+
+import ArticleVideo from '~/components/ArticleVideo.vue'
+import ArticleAudio from '~/components/ArticleAudio.vue'
 
 export default {
   components: {
     MainHeader,
+    ArticleText,
+    ArticleVideo,
+    ArticleAudio,
     Footer,
-    HorizontalContainer,
   },
   mixins: [mixinMethods],
   asyncData(ctx) {
     const l = ArticleData.main.quotes.length
 
-    const latest = ArticleData.main.latest.map((l) =>
-      ArticleData.stories.find((e) => e.slug === l.slug)
-    )
+    const latest = ArticleData.main.latest
+      .slice(1, 13)
+      .map((l) => ArticleData.stories.find((e) => e.slug === l.slug))
     const randomQuote = ArticleData.main.quotes[~~(Math.random() * l)]
     const featured = ArticleData.main.featured.map((l) =>
       ArticleData.stories.find((e) => e.slug === l.slug)
@@ -197,47 +167,54 @@ export default {
   data() {
     return {}
   },
-  computed: {},
   mounted() {
-    if (window.innerWidth > 1300) {
-      this.randomIcons(this.$refs.flourishes, 8, true, true)
-    }
-
-    this.$nextTick(() => {
-      if (location.hash) {
-        document.querySelector(location.hash).scrollIntoView()
+    // if (window.innerWidth > 1300) {
+    //   this.randomIcons(this.$refs.flourishes, 8, true, true)
+    // }
+    // this.$nextTick(() => {
+    //   if (location.hash) {
+    //     document.querySelector(location.hash).scrollIntoView()
+    //   }
+    // })
+    // const resizeObserver = new ResizeObserver((entries) => {
+    //   for (const entry of entries) {
+    //     if (location.hash && entry) {
+    //       setTimeout(() => {
+    //         document.querySelector(location.hash).scrollIntoView()
+    //       }, 400)
+    //     }
+    //   }
+    // })
+    // resizeObserver.observe(this.$refs.bios)
+    // const observer = new IntersectionObserver(
+    //   (entries, observer) => {
+    //     entries.forEach((entry) => {
+    //       if (entry.isIntersecting) {
+    //         history.pushState(
+    //           {},
+    //           null,
+    //           '#' + encodeURIComponent(entry.target.id)
+    //         )
+    //       }
+    //     })
+    //   },
+    //   { threshold: 1.0 }
+    // )
+    // this.$el
+    //   .querySelectorAll('h1[id],h2[id]')
+    //   .forEach((e) => observer.observe(e))
+  },
+  methods: {
+    articleFormatComponent(article) {
+      if (article.format === 'text') {
+        return 'article-text'
+      } else if (article.format === 'video') {
+        return 'article-video'
+      } else if (article.format === 'audio') {
+        return 'article-audio'
       }
-    })
-
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (location.hash && entry) {
-          setTimeout(() => {
-            document.querySelector(location.hash).scrollIntoView()
-          }, 400)
-        }
-      }
-    })
-
-    resizeObserver.observe(this.$refs.bios)
-
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            history.pushState(
-              {},
-              null,
-              '#' + encodeURIComponent(entry.target.id)
-            )
-          }
-        })
-      },
-      { threshold: 1.0 }
-    )
-    this.$el
-      .querySelectorAll('h1[id],h2[id]')
-      .forEach((e) => observer.observe(e))
+      return null
+    },
   },
 }
 </script>

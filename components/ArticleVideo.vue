@@ -12,34 +12,9 @@
         </iframe>
       </div>
     </vue-plyr>
-    <h1 class="serif blue f3 f2-ns lh-title mb0">
-      {{ article.title }}
-    </h1>
-    <div class="flex flex-column flex-row-ns justify-between">
-      <div
-        ref="container"
-        class="absolute random-textures z-0 pointer-events-none"
-      />
-      <div class="w-20-ns relative z-1">
-        <h5 class="dark-red lh-title pr3-ns normal mb0">PRODUCED BY</h5>
-        <h3 class="dark-red lh-title pr3-ns mt1 mb1">
-          {{ article.author }}
-        </h3>
-        <h3 class="dark-red lh-title pr3-ns normal mt1 mb1">
-          {{ article.location }}
-        </h3>
-        <h5 class="dark-red lh-title pr3-ns normal ma0 mt2">
-          {{ article.date }}
-        </h5>
-        <ShareButtons
-          :title="article.title"
-          :description="article.summary"
-          class="mv3"
-        />
-      </div>
-
+    <div class="">
       <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns"></p>
-      <div class="measure-wide w-60-ns lh-copy center f5 f4-ns">
+      <div class="relative measure-wide lh-copy f5 f4-ns">
         <article v-html="article.text"></article>
       </div>
     </div>
@@ -47,14 +22,8 @@
 </template>
 
 <script>
-import mixinMethods from '~/utils/mixinMethods'
-import ShareButtons from '~/components/ShareButtons.vue'
-
 export default {
-  components: {
-    ShareButtons,
-  },
-  mixins: [mixinMethods],
+  components: {},
   props: {
     article: {
       type: Object,
@@ -64,9 +33,7 @@ export default {
   data() {
     return {}
   },
-  mounted() {
-    this.randomImage(this.$refs.container)
-  },
+  mounted() {},
 }
 </script>
 
@@ -79,7 +46,7 @@ export default {
   // background: 0 0;
   // border: 0;
   // border-radius: 26px;
-  color: $blue;
+  color: $orange;
   // display: block;
   // height: 19px;
   // margin: 0;
@@ -96,6 +63,6 @@ export default {
 .plyr--video .plyr__control:hover,
 .plyr--video .plyr__control[aria-expanded='true'],
 .plyr__control--overlaid {
-  background: $blue;
+  background: $orange;
 }
 </style>

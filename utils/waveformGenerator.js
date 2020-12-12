@@ -33,7 +33,7 @@ const generateWaveform = (audioData, options) => {
     .attr('width', width)
     .attr('height', height)
     .attr('viewBox', `0,0,${width},${height}`)
-    .style('max-width', '100%')
+    .style('width', '100%')
     .style('height', 'auto')
     .style('display', 'block')
 
@@ -41,12 +41,12 @@ const generateWaveform = (audioData, options) => {
     .append('rect')
     .attr('width', width)
     .attr('height', height)
-    .attr('fill', '#204D8F')
+    .attr('fill', 'none')
 
   const g = svg
     .append('g')
     .attr('transform', `translate(0, ${height / 2})`)
-    .attr('fill', '#FFD299')
+    .attr('fill', '#FFC146')
 
   const band = (width - margin.left - margin.right) / audioData.length
   g.selectAll('rect')
