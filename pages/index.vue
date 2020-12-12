@@ -2,15 +2,12 @@
   <div class="relative">
     <MainHeader :copy="articleData.main.header.copy" />
     <div class="relative">
-      <section class="mw8 center ph3 relative z-1 mt2">
+      <section class="mw8 center ph3 relative z-1">
         <template v-for="article in latest">
           <article :key="article.slug" class="pb4">
             <div class="flex flex-column flex-row-ns">
               <div class="w-30-ns pr2-ns">
-                <h2
-                  class="orange mv0 lh-title f4 f2-ns"
-                  v-html="article.title"
-                ></h2>
+                <h2 class="mv0 lh-title f4 f2-ns" v-html="article.title"></h2>
 
                 <h3 class="black lh-title mv1 f5 f4-ns">
                   {{ article.author }}
@@ -101,13 +98,6 @@
           v-html="articleData.main.about.credits"
         ></div>
       </section>
-      <Modal
-        v-if="modelBioData"
-        class="z-10"
-        :authordata="modelBioData"
-        :article-data="articleData"
-        @toggleModal="toggleBioModal"
-      />
       <div class="flex justify-center pv4">
         <a
           href="#"
