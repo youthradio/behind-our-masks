@@ -1,13 +1,17 @@
 <template>
-  <header
-    class="flex flex-column items-center justify-center relative bg-orange lh-title"
-  >
-    <img class="db w-100" src="images/header.jpg" />
-    <div class="tc absolute">
-      <h3 class="f-2 f-3-m f-4-l fw6 ma0">
-        THE CALIFORNIA YOUTH MEDIA NETWORK PRESENTS
-      </h3>
-      <h1 class="f-4 f-5-ns fw8 mt0">BEHIND OUR MASK</h1>
+  <header class="bg-orange">
+    <div class="mw8 center ph3 relative z-1 mt2">
+      <div class="flex flex-wrap justify-between lh-title">
+        <h1 class="mt2 mb0 f1 fw8 nowrap-ns pr2">BEHIND OUR MASK</h1>
+        <h3
+          class="mt3 mb1 f6 fw8 flex flex-column justify-around nowrap-ns pl2"
+        >
+          <span>TWELVE STORIES</span><span>UNCOVERING CALIFORNIA</span
+          ><span>LIFE IN A PANDEMIC</span>
+        </h3>
+      </div>
+      <div class="bt b--black bw4 mt3 pb3"></div>
+      <img class="db w-100" src="images/header.jpg" />
     </div>
   </header>
 </template>

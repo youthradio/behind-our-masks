@@ -1,11 +1,7 @@
 <template>
   <div class="relative">
-    <MainHeader :copy="articleData.main.header.copy" class="relative" />
+    <MainHeader :copy="articleData.main.header.copy" />
     <div class="relative">
-      <div
-        ref="flourishes"
-        class="absolute flex flex-column justify-around z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
-      />
       <section class="mw8 center ph3 relative z-1 mt2">
         <template v-for="article in latest">
           <article :key="article.slug" class="pb4">
@@ -19,6 +15,11 @@
                 <h3 class="black lh-title mv1 f5 f4-ns">
                   {{ article.author }}
                 </h3>
+                <ShareButtons
+                  :title="article.title"
+                  :description="article.summary"
+                  class="mv3"
+                />
               </div>
               <div class="w-70-ns pl2-ns">
                 <main class="center">
@@ -123,11 +124,11 @@
 
 <script>
 import ArticleData from '~/data/data.json'
-import mixinMethods from '~/utils/mixinMethods'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
-import ArticleText from '~/components/ArticleText.vue'
+import ShareButtons from '~/components/ShareButtons.vue'
 
+import ArticleText from '~/components/ArticleText.vue'
 import ArticleVideo from '~/components/ArticleVideo.vue'
 import ArticleAudio from '~/components/ArticleAudio.vue'
 
@@ -138,8 +139,8 @@ export default {
     ArticleVideo,
     ArticleAudio,
     Footer,
+    ShareButtons,
   },
-  mixins: [mixinMethods],
   asyncData(ctx) {
     const l = ArticleData.main.quotes.length
 
