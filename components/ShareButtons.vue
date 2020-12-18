@@ -1,8 +1,6 @@
 <template>
   <aside>
-    <div
-      class="flex flex-rown flex-column-ns items-center justify-around w-content"
-    >
+    <div class="flex flex-column items-center justify-around w-content">
       <a
         class="dbi link grow bg-orange br-pill"
         target="_blank"
@@ -12,7 +10,7 @@
         )}&t=${encodeURIComponent(title)}`"
       >
         <svg
-          class="db pa2"
+          class="db pa1"
           width="24"
           height="24"
           viewBox="0 0 12 24"
@@ -33,7 +31,7 @@
         )}`"
       >
         <svg
-          class="db pa2"
+          class="db pa1"
           width="24"
           height="24"
           viewBox="0 0 24 20"
@@ -54,7 +52,7 @@
         )}&body=${encodeURIComponent(`${description}\n${url}`)}`"
       >
         <svg
-          class="db pa2"
+          class="db pa1"
           width="24"
           height="24"
           viewBox="0 0 24 18"
