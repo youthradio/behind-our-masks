@@ -1,7 +1,6 @@
 <template>
   <div class="relative mw9 center bg-white">
     <Menu ref="menu" :active-story="activeStory" :articles="latest" />
-
     <div class="grid-container relative">
       <div>
         <MainHeader :copy="articleData.main.header.copy" />
@@ -21,6 +20,12 @@
                     <h3 class="black lh-title mv1 f5 f4-ns">
                       {{ article.author }}
                     </h3>
+                    <ShareButtons
+                      :title="article.title"
+                      :description="article.summary"
+                      :hash="`#${article.slug}`"
+                      tweet-message=" @itsYRmedia etc "
+                    />
                   </div>
                   <div class="w-70-ns pl2-ns">
                     <main class="center">
@@ -110,7 +115,6 @@
               </ul>
             </div>
           </div>
-          <ShareButtons title="Test" description="test" class="mt4 ph1" />
         </div>
       </div>
     </div>
@@ -121,7 +125,7 @@
 import ArticleData from '~/data/data.json'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
-import ShareButtons from '~/components/ShareButtons.vue'
+import ShareButtons from '~/components_local/ShareButtons.vue'
 import Menu from '~/components/Menu.vue'
 
 import ArticleText from '~/components/ArticleText.vue'
@@ -154,22 +158,24 @@ export default {
     }
   },
   mounted() {
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            this.activeStory = entry.target.id
-            history.pushState(
-              {},
-              null,
-              '#' + encodeURIComponent(entry.target.id)
-            )
-          }
-        })
-      },
-      { threshold: 1.0 }
-    )
-    this.$refs.headline.forEach((e) => observer.observe(e))
+    // const observer = new IntersectionObserver(
+    //   (entries, observer) => {
+    //     for (const entry of entries) {
+    //       if (entry.isIntersecting) {
+    //         console.log(entry)
+    //         this.activeStory = entry.target.id
+    //         history.pushState(
+    //           {},
+    //           null,
+    //           '#' + encodeURIComponent(entry.target.id)
+    //         )
+    //       }
+    //     }
+    //   },
+    //   { threshold: 1.0 }
+    // )
+    // observer.observe(this.$refs.headlinetop)
+    // this.$refs.headline.forEach((e) => observer.observe(e))
   },
   methods: {
     articleFormatComponent(article) {
