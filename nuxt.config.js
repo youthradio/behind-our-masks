@@ -128,10 +128,12 @@ export default {
     {
       src: '~plugins/lazysizes.js',
       mode: 'client',
+      ssr: false,
     },
     {
       src: '~/plugins/vueplyr.js',
       mode: 'client',
+      ssr: false,
     },
   ],
   /*
