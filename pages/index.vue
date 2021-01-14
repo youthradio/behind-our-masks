@@ -158,24 +158,22 @@ export default {
     }
   },
   mounted() {
-    // const observer = new IntersectionObserver(
-    //   (entries, observer) => {
-    //     for (const entry of entries) {
-    //       if (entry.isIntersecting) {
-    //         console.log(entry)
-    //         this.activeStory = entry.target.id
-    //         history.pushState(
-    //           {},
-    //           null,
-    //           '#' + encodeURIComponent(entry.target.id)
-    //         )
-    //       }
-    //     }
-    //   },
-    //   { threshold: 1.0 }
-    // )
-    // observer.observe(this.$refs.headlinetop)
-    // this.$refs.headline.forEach((e) => observer.observe(e))
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            this.activeStory = entry.target.id
+            // history.pushState(
+            //   {},
+            //   null,
+            //   '#' + encodeURIComponent(entry.target.id)
+            // )
+          }
+        }
+      },
+      { threshold: 1.0 }
+    )
+    this.$refs.headline.forEach((e) => observer.observe(e))
   },
   methods: {
     articleFormatComponent(article) {
