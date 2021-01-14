@@ -35,7 +35,11 @@ module.exports = {
     },
     {
       name: 'Profile of essetial workers',
-      id: '1JjwoUkMKrsHT106dfDtt5C7A1mcmY5vTO_FqePRS7NE',
+      id: '1E-pwBDTTAJndMzwmNIpXQx84XhkLnXhtjtFGb1F-rr0',
+    },
+    {
+      name: 'No Easy Choices: Stay in School or Pay the Rent?',
+      id: '1BxDW9Cxh4E3hadmwtteLZvwjiCd0Bqmzk0GRwPTD2nY',
     },
   ],
   dataPath: 'data/data.json',
