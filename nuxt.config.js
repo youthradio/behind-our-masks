@@ -97,7 +97,7 @@ export default {
         sizes: '16x16',
         href: 'favicon/favicon-16x16.png',
       },
-      { rel: 'shortcut icon', href: 'favicon/favicon-32x32.png' },
+      { rel: 'shortcut icon', href: 'favicon/favicon.ico' },
       { rel: 'manifest', href: 'favicon/site.webmanifest' },
       {
         rel: 'mask-icon',
