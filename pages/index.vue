@@ -1,11 +1,14 @@
 <template>
-  <div class="relative mw9 center bg-white">
+  <div class="relative center">
     <Menu ref="menu" :active-story="activeStory" :articles="latest" />
     <div class="grid-container relative">
-      <div>
+      <div class="top-grid-area bg-orange grid-row-1"></div>
+      <div class="middle-grid-area grid-row-1">
         <MainHeader :copy="articleData.main.header.copy" />
+      </div>
+      <div class="middle-grid-area">
         <div class="relative">
-          <section class="mw8 center ph3 relative z-1">
+          <section class="center ph3 relative z-1">
             <template v-for="article in latest">
               <article :key="article.slug" class="pb4">
                 <div class="flex flex-column flex-row-ns">
@@ -63,60 +66,58 @@
             </a>
           </div>
         </div>
+      </div>
+      <div class="top-grid-area bg-orange grid-row-3"></div>
+      <div class="middle-grid-area grid-row-3">
         <Footer :content="articleData.main.footer" />
       </div>
-      <div class="bg-orange relative z-1">
+      <div class="relative z-1 menu-bar">
         <div class="sticky top-0">
-          <div class="pointer">
-            <div
-              class="dib bg-orange sticky top-0"
-              @click="$refs.menu.toggleMenu = true"
-            >
-              <ul class="ma0 pl0 ph1 pv3 list">
-                <li class="mb4 flex justify-center items-center">
-                  <svg
-                    fill="none"
-                    class="db"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 22"
-                    height="20"
-                  >
-                    <path
-                      transform-origin="center center"
-                      d="M15 5a3 3 0 10-4-4l4 4zM5 11L3 9l-2 2 2 2 2-2zm6 10a3 3 0 104-4l-4 4zm0-20L3 9l4 4 8-8-4-4zM3 13l8 8 4-4-8-8-4 4z"
-                      fill="#000"
-                    />
-                    <!-- <path
+          <div class="pointer dib" @click="$refs.menu.toggleMenu = true">
+            <ul class="ma0 pl0 ph1 pv3 list">
+              <li class="mb4 flex justify-center items-center">
+                <svg
+                  fill="none"
+                  class="db"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 22"
+                  height="20"
+                >
+                  <path
+                    transform-origin="center center"
+                    d="M15 5a3 3 0 10-4-4l4 4zM5 11L3 9l-2 2 2 2 2-2zm6 10a3 3 0 104-4l-4 4zm0-20L3 9l4 4 8-8-4-4zM3 13l8 8 4-4-8-8-4 4z"
+                    fill="#000"
+                  />
+                  <!-- <path
                       d="M1 17a3 3 0 104 4l-4-4zm10-6l2 2 2-2-2-2-2 2zM5 1a3 3 0 10-4 4l4-4zm0 20l8-8-4-4-8 8 4 4zm8-12L5 1 1 5l8 8 4-4z"
                       fill="#000"
                     /> -->
+                </svg>
+              </li>
+              <template v-for="article in latest">
+                <li
+                  :key="`${article.slug}-1`"
+                  class="pa1 flex justify-center items-center"
+                >
+                  <svg
+                    width="15"
+                    height="20"
+                    class="db"
+                    viewBox="0 0 20 20"
+                    :fill="activeStory === article.slug ? 'black' : 'none'"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="8.5"
+                      stroke="black"
+                      stroke-width="3"
+                    />
                   </svg>
                 </li>
-                <template v-for="article in latest">
-                  <li
-                    :key="`${article.slug}-1`"
-                    class="pa1 flex justify-center items-center"
-                  >
-                    <svg
-                      width="20"
-                      height="20"
-                      class="db"
-                      viewBox="0 0 20 20"
-                      :fill="activeStory === article.slug ? 'black' : 'none'"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="8.5"
-                        stroke="black"
-                        stroke-width="3"
-                      />
-                    </svg>
-                  </li>
-                </template>
-              </ul>
-            </div>
+              </template>
+            </ul>
           </div>
         </div>
       </div>
