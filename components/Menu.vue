@@ -28,8 +28,7 @@
             >
               <div>
                 <svg
-                  width="15"
-                  height="15"
+                  width="18"
                   class="db pr2 pt1"
                   viewBox="0 0 20 20"
                   :fill="activeStory === article.slug ? 'black' : 'none'"
@@ -54,16 +53,22 @@
           </template>
         </ul>
       </div>
-      <div>
+    </div>
+    <div class="relative z-1 menu-bar">
+      <div class="sticky top-0 ph1 pv3">
         <svg
           fill="none"
-          class="db pa2 sticky top-0"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 22"
-          height="15"
+          viewBox="0 0 20 20"
+          width="18"
+          class="db pa2 sticky top-0"
         >
           <path
-            d="M1 17a3 3 0 104 4l-4-4zm10-6l2 2 2-2-2-2-2 2zM5 1a3 3 0 10-4 4l4-4zm0 20l8-8-4-4-8 8 4 4zm8-12L5 1 1 5l8 8 4-4z"
+            d="M19 3a2 2 0 00-2-2l2 2zm-9 7L9 9l-1 1 1 1 1-1zm7 9a2 2 0 002-2l-2 2zm0-18L9 9l2 2 8-8-2-2zM9 11l8 8 2-2-8-8-2 2z"
+            fill="#000"
+          />
+          <path
+            d="M1 17a2 2 0 002 2l-2-2zm9-7l1 1 1-1-1-1-1 1zM3 1a1 1 0 10-2 2l2-2zm0 18l8-8-2-2-8 8 2 2zm8-10L3 1 1 3l8 8 2-2z"
             fill="#000"
           />
         </svg>

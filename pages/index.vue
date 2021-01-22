@@ -78,20 +78,17 @@
               <li class="mb4 flex justify-center items-center">
                 <svg
                   fill="none"
-                  class="db"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 22"
-                  height="20"
+                  viewBox="0 0 24 22"
+                  width="24"
+                  class="db"
                 >
                   <path
-                    transform-origin="center center"
-                    d="M15 5a3 3 0 10-4-4l4 4zM5 11L3 9l-2 2 2 2 2-2zm6 10a3 3 0 104-4l-4 4zm0-20L3 9l4 4 8-8-4-4zM3 13l8 8 4-4-8-8-4 4z"
-                    fill="#000"
+                    stroke="#000"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    d="M2 2h20M2 11h20M2 20h20"
                   />
-                  <!-- <path
-                      d="M1 17a3 3 0 104 4l-4-4zm10-6l2 2 2-2-2-2-2 2zM5 1a3 3 0 10-4 4l4-4zm0 20l8-8-4-4-8 8 4 4zm8-12L5 1 1 5l8 8 4-4z"
-                      fill="#000"
-                    /> -->
                 </svg>
               </li>
               <template v-for="article in latest">
@@ -100,8 +97,7 @@
                   class="pa1 flex justify-center items-center"
                 >
                   <svg
-                    width="15"
-                    height="20"
+                    width="18"
                     class="db"
                     viewBox="0 0 20 20"
                     :fill="activeStory === article.slug ? 'black' : 'none'"
