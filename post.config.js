@@ -1,18 +1,23 @@
+const BASEURL = process.env.BASE_URL_PRODUCTION || 'behind-our-mask'
+const CAN_URL = process.env.BASE_URL_PRODUCTION
+  ? `https://interactive.yr.media/${BASEURL}`
+  : `https://youthradio.github.io/${BASEURL}`
 module.exports = {
-  baseURL: process.env.BASE_URL_PRODUCTION || '/behind-our-mask',
-  title: 'Behind Our Mask',
+  baseURL: `/${BASEURL}`,
+  title:
+    'Behind Our Mask - The reality of COVID-19: Uncovering pandemic life for California’s young adults',
   author: 'Static Author',
   publishDate: 'April. 14, 2020',
   location: 'Oakland, CA',
   description:
-    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
-  url: 'https://youngamericaspeaksup.org/',
-  featureImage: 'https://youngamericaspeaksup.org/youngamericaspeaksup.jpg',
+    'We are young Californians. COVID has taken over our lives, and life choices. Behind our masks, our families changed; our paths changed; our futures changed. These are our stories of a year of struggle and finding our way forward. A project of YR Media in Oakland, The kNOw in Fresno, Boyle Heights Beat in Los Angeles, and Coachella Unincorporated in the Eastern Coachella Valley.',
+  url: CAN_URL,
+  featureImage: `${CAN_URL}/images/header.jpg`,
   featureImagePath: 'images/feature',
   featureImageDescription:
-    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
+    'We are young Californians. COVID has taken over our lives, and life choices. Behind our masks, our families changed; our paths changed; our futures changed. These are our stories of a year of struggle and finding our way forward. A project of YR Media in Oakland, The kNOw in Fresno, Boyle Heights Beat in Los Angeles, and Coachella Unincorporated in the Eastern Coachella Valley.',
   featureImageCaption:
-    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
+    'We are young Californians. COVID has taken over our lives, and life choices. Behind our masks, our families changed; our paths changed; our futures changed. These are our stories of a year of struggle and finding our way forward. A project of YR Media in Oakland, The kNOw in Fresno, Boyle Heights Beat in Los Angeles, and Coachella Unincorporated in the Eastern Coachella Valley.',
   wpPostSlug:
     'Black-Mirror-What-Artificial-Intelligence-Means-for-Race-Art-and-the-Apocalypse',
   wpPostID: '60986',

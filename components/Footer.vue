@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-washed-red">
+  <footer class="bg-orange">
     <div class="mw8 center ph3">
       <div class="bb bw2 flex flex-column flex-row-ns items-center">
         <NewsletterSignup class="w-60-ns" :message="content.newsletter.text" />
@@ -51,35 +51,6 @@
                 alt="Radio Rookies"
             /></a>
           </div>
-        </div>
-        <div class="mt3 mt0-ns ml4-ns w-40-ns tc tl-ns">
-          <p class="">
-            <a
-              href="mailto:kpitkin@wnyc.org,rebecca@yrmedia.org?subject=18-29%20website%20contact"
-              target="_blank"
-              class="link blue underline underline-hover hover-dark-red"
-            >
-              Contact and Media Inquiries
-            </a>
-          </p>
-          <p class="ph2 ph0-ns">
-            <a
-              href="https://www.wnyc.org/terms"
-              target="_blank"
-              class="link blue underline underline-hover hover-dark-red"
-            >
-              Terms of Use
-            </a>
-          </p>
-          <p class="ph2 ph0-ns">
-            <a
-              href="https://yr.media/privacy-policy/"
-              target="_blank"
-              class="link blue underline underline-hover hover-dark-red"
-            >
-              Privacy Policy
-            </a>
-          </p>
         </div>
       </div>
     </div>

@@ -1,29 +1,8 @@
 <template>
   <aside>
-    <div class="flex items-center justify-around w-content">
+    <div class="flex items-center justify-around w-content nl1 mv2">
       <a
-        class="dbi link grow bg-orange br-pill"
-        target="_blank"
-        rel="nofollow"
-        :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-          url
-        )}&t=${encodeURIComponent(title)}`"
-      >
-        <svg
-          class="db pa1"
-          width="24"
-          height="24"
-          viewBox="0 0 12 24"
-          fill="none"
-        >
-          <path
-            d="M3 8H0V12H3V24H8V12H11.642L12 8H8V6.333C8 5.378 8.192 5 9.115 5H12V0H8.192C4.596 0 3 1.583 3 4.615V8Z"
-            fill="black"
-          />
-        </svg>
-      </a>
-      <a
-        class="db link grow bg-orange br-pill"
+        class="db link grow bg-orange br-pill mh1"
         target="_blank"
         rel="nofollow"
         :href="`https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -44,9 +23,31 @@
         </svg>
       </a>
       <a
+        class="dbi link grow bg-orange br-pill mh1"
         target="_blank"
         rel="nofollow"
-        class="db link grow bg-orange br-pill"
+        :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          url
+        )}&t=${encodeURIComponent(title)}`"
+      >
+        <svg
+          class="db pa1"
+          width="24"
+          height="24"
+          viewBox="0 0 12 24"
+          fill="none"
+        >
+          <path
+            d="M3 8H0V12H3V24H8V12H11.642L12 8H8V6.333C8 5.378 8.192 5 9.115 5H12V0H8.192C4.596 0 3 1.583 3 4.615V8Z"
+            fill="black"
+          />
+        </svg>
+      </a>
+
+      <a
+        target="_blank"
+        rel="nofollow"
+        class="db link grow bg-orange br-pill mh1"
         :href="`mailto:info@example.com?&subject=${encodeURIComponent(
           title
         )}&body=${encodeURIComponent(`${description}\n${url}`)}`"

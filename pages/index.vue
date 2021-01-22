@@ -20,6 +20,9 @@
                     <h3 class="black lh-title mv1 f5 f4-ns">
                       {{ article.author }}
                     </h3>
+                    <h4 class="black lh-title mv1 f6 f5-ns">
+                      {{ article.org }}
+                    </h4>
                     <ShareButtons
                       :title="article.title"
                       :description="article.summary"
