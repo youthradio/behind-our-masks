@@ -4,12 +4,11 @@
       <div class="plyr__video-embed">
         <iframe
           :src="`https://www.youtube.com/embed/${article.videoid}?iv_load_policy=3&modestbranding=1&playsinline=1&showinfo=0&rel=0&enablejsapi=1`"
+          allow="autoplay; encrypted-media; picture-in-picture"
           allowfullscreen
           allowtransparency
           playsinline
-          allow="autoplay"
-        >
-        </iframe>
+        ></iframe>
       </div>
     </vue-plyr>
     <div class="">

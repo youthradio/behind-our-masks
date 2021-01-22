@@ -154,7 +154,7 @@ a:focus {
     font-size: 4rem;
   }
   .img-texture {
-    width: calc(100vw/6);
+    width: calc(100vw / 6);
     max-width: 300px;
   }
 
@@ -186,8 +186,10 @@ a:focus {
 
   .grid-container-ns {
     display: grid;
-    grid-template-columns: repeat(6,
-        MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px));
+    grid-template-columns: repeat(
+      6,
+      MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px)
+    );
     grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px));
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
@@ -196,8 +198,10 @@ a:focus {
   @media (orientation: portrait) {
     .grid-container-ns {
       display: grid;
-      grid-template-columns: repeat(6,
-          MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px));
+      grid-template-columns: repeat(
+        6,
+        MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px)
+      );
       grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px));
       grid-column-gap: 1rem;
       grid-row-gap: 1rem;
@@ -216,27 +220,34 @@ a:focus {
 //   grid-row-gap: 1rem;
 // }
 
-
-
-@media #{$breakpoint-medium} {}
+@media #{$breakpoint-medium} {
+}
 
 @media #{$breakpoint-large} {
-
   .grid-col-5-6-lg {
     grid-column: 5 / 6;
   }
 
   .grid-container-l {
     display: grid;
-    grid-template-columns: repeat(6,
-        MIN(calc(100vw / 6 - 5 * 1rem / 6), 250px));
+    grid-template-columns: repeat(
+      6,
+      MIN(calc(100vw / 6 - 5 * 1rem / 6), 250px)
+    );
     grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 250px));
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
   }
 }
 
-
 .sticky {
-  position: sticky
+  position: sticky;
+}
+.fit-cover {
+  object-fit: cover;
+}
+.grid-two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 1em;
 }

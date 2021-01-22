@@ -64,6 +64,8 @@ function markdown2html(data) {
               'style',
               'strong',
               'i',
+              'blockquote',
+              'div',
             ],
             KEEP_CONTENT: true,
           }
