@@ -2,7 +2,7 @@
   <div class="relative center">
     <Menu ref="menu" :active-story="activeStory" :articles="latest" />
     <div class="grid-container relative">
-      <div class="top-grid-area bg-orange grid-row-1"></div>
+      <div class="top-grid-area bg-orange grid-row-1 mb5"></div>
       <div class="middle-grid-area grid-row-1">
         <MainHeader :copy="articleData.main.header.copy" />
       </div>
@@ -16,14 +16,14 @@
                     <h2
                       :id="article.slug"
                       ref="headline"
-                      class="mv0 lh-title f4 f2-ns"
+                      class="mv0 lh-solid f4 f2-ns"
                       v-html="article.title"
                     ></h2>
 
-                    <h3 class="black lh-title mv1 f5 f4-ns">
+                    <h3 class="black lh-title mv1 f5 f4-ns fw5">
                       {{ article.author }}
                     </h3>
-                    <h4 class="black lh-title mv1 f6 f5-ns">
+                    <h4 class="black lh-title mv1 f6 f5-ns fw5">
                       {{ article.org }}
                     </h4>
                     <ShareButtons

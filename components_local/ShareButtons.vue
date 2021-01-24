@@ -10,7 +10,7 @@
         )}`"
       >
         <svg
-          class="db pa1"
+          class="db pa2"
           width="24"
           height="24"
           viewBox="0 0 24 20"
@@ -31,7 +31,7 @@
         )}&t=${encodeURIComponent(title)}`"
       >
         <svg
-          class="db pa1"
+          class="db pa2"
           width="24"
           height="24"
           viewBox="0 0 12 24"
@@ -53,7 +53,7 @@
         )}&body=${encodeURIComponent(`${description}\n${url}`)}`"
       >
         <svg
-          class="db pa1"
+          class="db pa2"
           width="24"
           height="24"
           viewBox="0 0 24 18"

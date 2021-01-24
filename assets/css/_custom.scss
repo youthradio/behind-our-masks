@@ -137,9 +137,17 @@ a:focus {
   font-size: 4rem;
 }
 
+.f-4-5 {
+  font-size: 4.5rem;
+}
+
 @media #{$breakpoint-not-small} {
   .f-4-ns {
     font-size: 4rem;
+  }
+
+  .f-4-5-ns {
+    font-size: 4.5rem;
   }
   .img-texture {
     width: calc(100vw / 6);
@@ -207,6 +215,11 @@ a:focus {
 //   grid-column-gap: 1rem;
 //   grid-row-gap: 1rem;
 // }
+@media #{$breakpoint-medium-small} {
+  .f1-ms {
+    font-size: 3rem;
+  }
+}
 
 @media #{$breakpoint-medium} {
 }

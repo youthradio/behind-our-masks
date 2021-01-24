@@ -10,7 +10,7 @@
         :title="article.featureImageCaption"
       />
       <div v-if="article.featureImageCredits" class="f7 gray">
-        <small>{{ article.featureImageCredits }}</small>
+        <small class="f7 gray">{{ article.featureImageCredits }}</small>
       </div>
     </div>
     <div class="relative measure-wide lh-copy f5 f4-ns">

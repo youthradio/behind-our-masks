@@ -11,7 +11,7 @@
         <div class="ph3 relative z-1 pv3 sticky top-0 bg-orange">
           <div class="flex flex-wrap justify-between lh-title">
             <h1 class="mt2 mb0 f1 fw8 nowrap-ns pr2-ns">BEHIND OUR MASKS</h1>
-            <h3 class="mt3 mb1 f6 fw8 flex flex-column justify-around pl2-ns">
+            <h3 class="mt3 mb1 f5 fw8 flex flex-column justify-around pl2-ns">
               <div class="ttu mw5">
                 Uncovering pandemic life for California’s young adults
               </div>
