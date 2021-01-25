@@ -18,7 +18,7 @@
               />
             </div>
             <button
-              class="pointer sans-serif f6 f5-ns grow no-underline ph3 pv2 dib washed-red bg-blue center nowrap br-pill bn"
+              class="pointer black sans-serif f6 f5-ns grow no-underline ph3 pv2 dib bg-orange center nowrap br-pill bn"
               type="submit"
             >
               Sign Up

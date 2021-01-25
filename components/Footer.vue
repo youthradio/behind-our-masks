@@ -1,54 +1,69 @@
 <template>
-  <footer class="bg-orange">
+  <footer>
     <div class="mw8 center ph3">
       <div class="bb bw2 flex flex-column flex-row-ns items-center">
         <NewsletterSignup class="w-60-ns" :message="content.newsletter.text" />
-        <div class="blue ml4-ns w-40-ns" v-html="content.text"></div>
       </div>
-      <div
-        class="flex flex flex-column flex-row-ns items-center justify-between justify-start-ns pv3"
-      >
-        <div
-          class="flex w-80 w-60-ns justify-around justify-start-ns items-baseline"
-        >
+
+      <div class="flex flex-wrap">
+        <div class="measure center" v-html="content.text"></div>
+
+        <div class="flex justify-around center mt3">
           <div class="ph2">
             <a
-              href="https://yr.media"
+              href="https://boyleheightsbeat.com/"
               target="_blank"
+              rel="noreferrer"
               class="db pointer link grow no-underline"
             >
               <img
-                src="logos/yrlogo.svg"
-                class="db img-fluid-h"
+                src="n_images/bhb.png"
+                class="db w-100 mw3"
                 loading="lazy"
-                alt="YR Media Logo"
+                alt="Boyle Heights Beats"
             /></a>
           </div>
           <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
           <div class="ph2">
             <a
-              href="https://wnyc.org"
+              href="https://coachellaunincorporated.org/"
               target="_blank"
+              rel="noreferrer"
               class="db pointer link grow no-underline"
             >
               <img
-                src="logos/wnyclogo.svg"
-                class="db img-fluid-h"
+                src="n_images/cuninc.png"
+                class="db w-100 mw3"
                 loading="lazy"
-                alt="WNYC Logo"
+                alt="Coachella Unincorporated"
             /></a>
           </div>
           <div class="ph2">
             <a
-              href="https://www.wnyc.org/shows/rookies"
+              href="https://theknowfresno.org/"
               target="_blank"
+              rel="noreferrer"
               class="db pointer link grow no-underline"
             >
               <img
-                src="logos/radio-rookies.svg"
-                class="db img-fluid-h"
+                src="n_images/thek.png"
+                class="db w-100 mw3"
                 loading="lazy"
-                alt="Radio Rookies"
+                alt="The Know Youth Media"
+            /></a>
+          </div>
+          <div class="ph2">
+            <a
+              href="https://yr.media"
+              target="_blank"
+              rel="noreferrer"
+              class="db pointer link grow no-underline"
+            >
+              <img
+                src="n_images/yrmedia.png"
+                class="db w-100 mw3"
+                loading="lazy"
+                alt="YR Media"
             /></a>
           </div>
         </div>

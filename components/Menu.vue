@@ -73,6 +73,69 @@
         </svg>
       </div>
     </div>
+    <div class="middle-grid-area dn flex-ns flex-wrap grid-row-3 self-end">
+      <div class="measure center" v-html="footer.text"></div>
+
+      <div class="flex justify-around center mt3">
+        <div class="ph2">
+          <a
+            href="https://boyleheightsbeat.com/"
+            target="_blank"
+            rel="noreferrer"
+            class="db pointer link grow no-underline"
+          >
+            <img
+              src="n_images/bhb.png"
+              class="db w-100 mw3"
+              loading="lazy"
+              alt="Boyle Heights Beats"
+          /></a>
+        </div>
+        <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
+        <div class="ph2">
+          <a
+            href="https://coachellaunincorporated.org/"
+            target="_blank"
+            rel="noreferrer"
+            class="db pointer link grow no-underline"
+          >
+            <img
+              src="n_images/cuninc.png"
+              class="db w-100 mw3"
+              loading="lazy"
+              alt="Coachella Unincorporated"
+          /></a>
+        </div>
+        <div class="ph2">
+          <a
+            href="https://theknowfresno.org/"
+            target="_blank"
+            rel="noreferrer"
+            class="db pointer link grow no-underline"
+          >
+            <img
+              src="n_images/thek.png"
+              class="db w-100 mw3"
+              loading="lazy"
+              alt="The Know Youth Media"
+          /></a>
+        </div>
+        <div class="ph2">
+          <a
+            href="https://yr.media"
+            target="_blank"
+            rel="noreferrer"
+            class="db pointer link grow no-underline"
+          >
+            <img
+              src="n_images/yrmedia.png"
+              class="db w-100 mw3"
+              loading="lazy"
+              alt="YR Media"
+          /></a>
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -84,6 +147,10 @@ export default {
       required: true,
     },
     activeStory: {
+      type: String,
+      required: true,
+    },
+    footer: {
       type: String,
       required: true,
     },

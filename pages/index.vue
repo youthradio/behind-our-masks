@@ -1,6 +1,11 @@
 <template>
   <div class="relative center">
-    <Menu ref="menu" :active-story="activeStory" :articles="latest" />
+    <Menu
+      ref="menu"
+      :active-story="activeStory"
+      :articles="latest"
+      :footer="articleData.main.footer"
+    />
     <div class="grid-container relative">
       <div class="top-grid-area bg-orange grid-row-1 mb5"></div>
       <div class="middle-grid-area grid-row-1">
@@ -10,7 +15,7 @@
         <div class="relative">
           <section class="center ph3 relative z-1">
             <template v-for="article in latest">
-              <article :key="article.slug" class="pb4">
+              <article :key="article.slug" class="pv4">
                 <div class="flex flex-column flex-row-ns">
                   <div class="w-30-ns pr2-ns">
                     <h2
@@ -45,21 +50,10 @@
               </article>
             </template>
           </section>
-          <!-- <section class="mw8 center ph3 mt4 mt5-ns relative z-1">
-            <h2 id="about" class="blue mt0 lh-title ttu">About</h2>
-            <div
-              class="mw9 center lh-copy f5 f4-ns"
-              v-html="articleData.main.about.text"
-            ></div>
-            <div
-              class="mw9 center lh-copy f7 i"
-              v-html="articleData.main.about.credits"
-            ></div>
-          </section> -->
           <div class="flex justify-center pv4">
             <a
               href="#"
-              class="pointer f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue center"
+              class="pointer black f6 grow no-underline br-pill ph3 pv2 mb2 dib bg-orange center"
               title="Back to Top"
             >
               Back to Top
@@ -67,7 +61,6 @@
           </div>
         </div>
       </div>
-      <div class="top-grid-area bg-orange grid-row-3"></div>
       <div class="middle-grid-area grid-row-3">
         <Footer :content="articleData.main.footer" />
       </div>
