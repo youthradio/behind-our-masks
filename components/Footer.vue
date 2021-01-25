@@ -8,7 +8,7 @@
       <div class="flex flex-wrap">
         <div class="measure center" v-html="content.text"></div>
 
-        <div class="flex justify-around center mt3">
+        <div class="flex justify-around center mv3">
           <div class="ph2">
             <a
               href="https://boyleheightsbeat.com/"
@@ -18,7 +18,7 @@
             >
               <img
                 src="n_images/bhb.png"
-                class="db w-100 mw3"
+                class="mw3"
                 loading="lazy"
                 alt="Boyle Heights Beats"
             /></a>
@@ -33,7 +33,7 @@
             >
               <img
                 src="n_images/cuninc.png"
-                class="db w-100 mw3"
+                class="mw3"
                 loading="lazy"
                 alt="Coachella Unincorporated"
             /></a>
@@ -47,7 +47,7 @@
             >
               <img
                 src="n_images/thek.png"
-                class="db w-100 mw3"
+                class="mw3"
                 loading="lazy"
                 alt="The Know Youth Media"
             /></a>
@@ -61,7 +61,7 @@
             >
               <img
                 src="n_images/yrmedia.png"
-                class="db w-100 mw3"
+                class="mw3"
                 loading="lazy"
                 alt="YR Media"
             /></a>

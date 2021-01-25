@@ -9,15 +9,17 @@
     <div class="middle-grid-area">
       <div class="center">
         <div class="ph3 relative z-1 pv3 sticky top-0 bg-orange">
-          <div class="flex flex-wrap justify-between lh-title">
-            <h1 class="mt2 mb0 f1 fw8 nowrap-ns pr2-ns">BEHIND OUR MASKS</h1>
+          <div class="flex flex-wrap justify-between">
+            <h1 class="mt2 mb0 f-4-5-ns fw8 nowrap-ns pr2-ns lh-0-9">
+              BEHIND OUR MASKS
+            </h1>
             <h3 class="mt3 mb1 f5 fw8 flex flex-column justify-around pl2-ns">
               <div class="ttu mw5">
                 Uncovering pandemic life for California’s young adults
               </div>
             </h3>
           </div>
-          <div class="bt b--black bw4 mt3 pb3"></div>
+          <div class="bt b--black bw4 pb3"></div>
         </div>
         <ul class="ma0 pl0 ph3 pv3 list">
           <template v-for="article in articles">
@@ -44,7 +46,7 @@
               </div>
               <a :href="`#${article.slug}`" class="link db dim black pl1">
                 <h4
-                  class="mv0 lh-title f6 f5-ns menu-item"
+                  class="mv0 lh-title f4 fw4 menu-item"
                   v-html="article.title"
                 ></h4
               ></a>
@@ -73,10 +75,10 @@
         </svg>
       </div>
     </div>
-    <div class="middle-grid-area dn flex-ns flex-wrap grid-row-3 self-end">
+    <div class="ph3 middle-grid-area dn flex-ns flex-wrap grid-row-3 self-end">
       <div class="measure center" v-html="footer.text"></div>
 
-      <div class="flex justify-around center mt3">
+      <div class="flex justify-around center mv3">
         <div class="ph2">
           <a
             href="https://boyleheightsbeat.com/"
@@ -86,7 +88,7 @@
           >
             <img
               src="n_images/bhb.png"
-              class="db w-100 mw3"
+              class="mw3"
               loading="lazy"
               alt="Boyle Heights Beats"
           /></a>
@@ -101,7 +103,7 @@
           >
             <img
               src="n_images/cuninc.png"
-              class="db w-100 mw3"
+              class="mw3"
               loading="lazy"
               alt="Coachella Unincorporated"
           /></a>
@@ -115,7 +117,7 @@
           >
             <img
               src="n_images/thek.png"
-              class="db w-100 mw3"
+              class="mw3"
               loading="lazy"
               alt="The Know Youth Media"
           /></a>
@@ -129,7 +131,7 @@
           >
             <img
               src="n_images/yrmedia.png"
-              class="db w-100 mw3"
+              class="mw3"
               loading="lazy"
               alt="YR Media"
           /></a>
