@@ -1,11 +1,7 @@
 <template>
   <footer>
     <div class="mw8 center ph3">
-      <div class="bb bw2 flex flex-column flex-row-ns items-center">
-        <NewsletterSignup class="w-60-ns" :message="content.newsletter.text" />
-      </div>
-
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap justify-between items-center">
         <div class="measure" v-html="content.text"></div>
 
         <div class="flex justify-around mv3">
@@ -72,12 +68,8 @@
   </footer>
 </template>
 <script>
-import NewsletterSignup from '~/components/NewsletterSignup.vue'
-
 export default {
-  components: {
-    NewsletterSignup,
-  },
+  components: {},
   props: {
     content: {
       type: Object,

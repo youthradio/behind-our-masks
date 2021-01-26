@@ -75,7 +75,9 @@
         </svg>
       </div>
     </div>
-    <div class="ph3 middle-grid-area dn flex-ns flex-wrap grid-row-3 self-end">
+    <div
+      class="ph3 middle-grid-area dn flex-ns flex-wrap grid-row-3 self-end justify-between items-center"
+    >
       <div class="measure" v-html="footer.text"></div>
 
       <div class="flex justify-around mv3">
