@@ -1,9 +1,13 @@
-const BASEURL = process.env.BASE_URL_PRODUCTION || 'behind-our-masks'
-const CAN_URL = process.env.BASE_URL_PRODUCTION
-  ? `https://interactive.yr.media/${BASEURL}`
-  : `https://youthradio.github.io/${BASEURL}`
+const BASEURL =
+  process.env.BASE_URL_PRODUCTION === ''
+    ? process.env.BASE_URL_PRODUCTION
+    : '/behind-our-masks'
+const CAN_URL =
+  process.env.BASE_URL_PRODUCTION === ''
+    ? `https://behindourmasks.net`
+    : `https://youthradio.github.io${BASEURL}`
 module.exports = {
-  baseURL: `/${BASEURL}`,
+  baseURL: BASEURL,
   title:
     'Behind Our Masks - Uncovering pandemic life for California’s young adults',
   author: 'Static Author',
