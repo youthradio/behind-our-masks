@@ -76,9 +76,9 @@
       </div>
     </div>
     <div class="ph3 middle-grid-area dn flex-ns flex-wrap grid-row-3 self-end">
-      <div class="measure center" v-html="footer.text"></div>
+      <div class="measure" v-html="footer.text"></div>
 
-      <div class="flex justify-around center mv3">
+      <div class="flex justify-around mv3">
         <div class="ph2">
           <a
             href="https://boyleheightsbeat.com/"
@@ -153,7 +153,7 @@ export default {
       required: true,
     },
     footer: {
-      type: String,
+      type: Object,
       required: true,
     },
   },

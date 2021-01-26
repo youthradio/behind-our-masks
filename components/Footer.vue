@@ -6,9 +6,9 @@
       </div>
 
       <div class="flex flex-wrap">
-        <div class="measure center" v-html="content.text"></div>
+        <div class="measure" v-html="content.text"></div>
 
-        <div class="flex justify-around center mv3">
+        <div class="flex justify-around mv3">
           <div class="ph2">
             <a
               href="https://boyleheightsbeat.com/"
