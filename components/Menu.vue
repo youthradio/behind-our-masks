@@ -90,7 +90,7 @@
           >
             <img
               src="n_images/bhb.png"
-              class="mw3"
+              class="mw3 w-100"
               loading="lazy"
               alt="Boyle Heights Beats"
           /></a>
@@ -105,7 +105,7 @@
           >
             <img
               src="n_images/cuninc.png"
-              class="mw3"
+              class="mw3 w-100"
               loading="lazy"
               alt="Coachella Unincorporated"
           /></a>
@@ -119,7 +119,7 @@
           >
             <img
               src="n_images/thek.png"
-              class="mw3"
+              class="mw3 w-100"
               loading="lazy"
               alt="The Know Youth Media"
           /></a>
@@ -133,7 +133,7 @@
           >
             <img
               src="n_images/yrmedia.png"
-              class="mw3"
+              class="mw3 w-100"
               loading="lazy"
               alt="YR Media"
           /></a>
