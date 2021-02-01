@@ -66,7 +66,12 @@
       </div>
       <div class="relative z-1 menu-bar">
         <div class="sticky top-0">
-          <div class="pointer dib" @click="$refs.menu.toggleMenu = true">
+          <div
+            class="pointer dib"
+            tabindex="0"
+            role="button"
+            @click="$refs.menu.toggleMenu = true"
+          >
             <ul class="ma0 pl0 ph1 pv3 list">
               <li class="mb4 flex justify-center items-center">
                 <svg

@@ -4,7 +4,9 @@
       'grid-container bg-orange z-2 menu-body min-vh-100',
       toggleMenu ? 'open' : 'close',
     ]"
+    tabindex="0"
     @click="toggleMenu = false"
+    @keydown.esc="toggleMenu = false"
   >
     <div class="middle-grid-area">
       <div class="center">
@@ -163,6 +165,11 @@ export default {
     return {
       toggleMenu: false,
     }
+  },
+  watch: {
+    toggleMenu(nval, old) {
+      if (nval) this.$el.focus()
+    },
   },
 }
 </script>
