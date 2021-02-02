@@ -18,6 +18,25 @@
               <article :key="article.slug" class="pv4">
                 <div class="flex flex-column flex-row-ns">
                   <div class="w-30-ns pr2-ns">
+                    <div class="flex items-center">
+                      <svg
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 10 16"
+                        width="10"
+                        class="di"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5 0a5 5 0 00-5 5c0 2.8 4.6 10.4 4.8 10.7l.2.3.2-.3c.2-.3 4.8-8 4.8-10.6A5 5 0 005 0zm0 7a2 2 0 100-4 2 2 0 000 4z"
+                          fill="#606060"
+                        />
+                      </svg>
+                      <h4 class="di mid-gray lh-title ma1 f6 f5-ns fw5">
+                        {{ article.location }}
+                      </h4>
+                    </div>
                     <h2
                       :id="article.slug"
                       ref="headline"
@@ -25,12 +44,19 @@
                       v-html="article.title"
                     ></h2>
 
-                    <h3 class="black lh-title mv1 f5 f4-ns fw5">
+                    <h3 class="mid-gray lh-title mv1 f5 f4-ns fw5">
                       {{ article.author }}
                     </h3>
-                    <h4 class="black lh-title mv1 f6 f5-ns fw5">
-                      {{ article.org }}
-                    </h4>
+                    <a
+                      :href="article.org.link"
+                      target="_blank"
+                      rel="noreferrer"
+                      class="dib pointer link dim no-underline"
+                    >
+                      <h4 class="mid-gray lh-title mv1 f6 f5-ns fw5">
+                        {{ article.org.name }}
+                      </h4>
+                    </a>
                     <ShareButtons
                       :title="article.title"
                       :description="article.summary"
