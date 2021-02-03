@@ -49,7 +49,6 @@ export default {
         property: 'og:image:alt',
         content: POSTCONFIG.featureImageDescription,
       },
-      { property: 'fb:app_id', content: POSTCONFIG.fbAppID },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:creator', content: POSTCONFIG.twitterHandler },
       { name: 'twitter:site', content: POSTCONFIG.twitterHandler },
@@ -146,7 +145,18 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/sitemap', '@nuxtjs/google-gtag'],
+  modules: [
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-gtag',
+    'nuxt-facebook-pixel-module',
+  ],
+  facebook: {
+    /* module options */
+    track: 'PageView',
+    pixelId: '242649400752480',
+    autoPageView: true,
+    disabled: false,
+  },
   'google-gtag': {
     id: 'G-KR3HCRCC23',
     config: {
