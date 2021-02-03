@@ -58,7 +58,7 @@
       </div>
     </div>
     <div class="relative z-1 menu-bar">
-      <div class="sticky top-0 ph1 pv3">
+      <div class="sticky top-0 ph1 pv3 pointer">
         <svg
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@
     <div
       class="ph3 middle-grid-area dn flex-ns flex-wrap grid-row-3 self-end justify-between items-center"
     >
-      <div class="measure" v-html="footer.text"></div>
+      <div class="measure lh-1-2" v-html="footer.text"></div>
 
       <div class="flex justify-around mv3">
         <div class="ph2">

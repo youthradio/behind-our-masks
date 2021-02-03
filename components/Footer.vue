@@ -2,7 +2,7 @@
   <footer>
     <div class="mw8 center ph3">
       <div class="flex flex-wrap justify-between items-center">
-        <div class="measure" v-html="content.text"></div>
+        <div class="measure lh-1-2" v-html="content.text"></div>
 
         <div class="flex justify-around mv3">
           <div class="ph2">

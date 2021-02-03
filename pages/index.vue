@@ -44,7 +44,7 @@
                       v-html="article.title"
                     ></h2>
 
-                    <h3 class="mid-gray lh-title mv1 f5 f4-ns fw5">
+                    <h3 class="mid-gray lh-title mt-0-1-5 mb1 f5 f4-ns fw5">
                       {{ article.author }}
                     </h3>
                     <a
@@ -53,7 +53,7 @@
                       rel="noreferrer"
                       class="dib pointer link dim no-underline"
                     >
-                      <h4 class="mid-gray lh-title mv1 f6 f5-ns fw5">
+                      <h4 class="mid-gray lh-title mt-0-1-5 mb1 f6 f5-ns fw5">
                         {{ article.org.name }}
                       </h4>
                     </a>
@@ -92,49 +92,52 @@
       </div>
       <div class="relative z-1 menu-bar">
         <div class="sticky top-0">
-          <div
-            class="pointer dib"
-            tabindex="0"
-            role="button"
-            @click="$refs.menu.toggleMenu = true"
-          >
+          <div class="dib">
             <ul class="ma0 pl0 ph1 pv3 list">
               <li class="mb4 flex justify-center items-center">
-                <svg
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 22"
-                  width="24"
-                  class="db"
+                <a
+                  class="pointer db"
+                  tabindex="0"
+                  @click="$refs.menu.toggleMenu = true"
                 >
-                  <path
-                    stroke="#000"
-                    stroke-width="4"
-                    stroke-linecap="round"
-                    d="M2 2h20M2 11h20M2 20h20"
-                  />
-                </svg>
+                  <svg
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 22"
+                    width="24"
+                    class="db"
+                  >
+                    <path
+                      stroke="#000"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      d="M2 2h20M2 11h20M2 20h20"
+                    />
+                  </svg>
+                </a>
               </li>
               <template v-for="article in latest">
                 <li
                   :key="`${article.slug}-1`"
                   class="pa1 flex justify-center items-center"
                 >
-                  <svg
-                    width="18"
-                    class="db"
-                    viewBox="0 0 20 20"
-                    :fill="activeStory === article.slug ? 'black' : 'none'"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10"
-                      r="8.5"
-                      stroke="black"
-                      stroke-width="3"
-                    />
-                  </svg>
+                  <a :href="`#${article.slug}`" class="link dim black pl1">
+                    <svg
+                      width="18"
+                      class="db"
+                      viewBox="0 0 20 20"
+                      :fill="activeStory === article.slug ? 'black' : 'none'"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="8.5"
+                        stroke="black"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </a>
                 </li>
               </template>
             </ul>
