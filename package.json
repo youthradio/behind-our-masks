@@ -27,6 +27,7 @@
     "nuxt": "^2.14.12",
     "nuxt-facebook-pixel-module": "^1.5.0",
     "plyr": "^3.6.3",
+    "smoothscroll-polyfill": "^0.4.4",
     "vue-mailchimp-subscribe": "^1.1.0",
     "vue-plyr": "6.0.4"
   },

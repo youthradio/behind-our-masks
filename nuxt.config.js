@@ -125,6 +125,11 @@ export default {
    */
   plugins: [
     {
+      src: '~plugins/smoothscroll.js',
+      mode: 'client',
+      ssr: false,
+    },
+    {
       src: '~plugins/lazysizes.js',
       mode: 'client',
       ssr: false,

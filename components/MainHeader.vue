@@ -13,6 +13,9 @@
       </div>
       <div class="bt b--black bw4 pb3"></div>
       <img class="db w-100" src="images/header.jpg" />
+      <div class="f7 gray">
+        <small class="f7 gray"> Illustration: Ulonie Garza </small>
+      </div>
     </div>
   </header>
 </template>
