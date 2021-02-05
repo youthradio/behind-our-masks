@@ -16,7 +16,7 @@ module.exports = {
   description:
     'We are young Californians. COVID has taken over our lives, and life choices. Behind our masks, our families changed; our paths changed; our futures changed. These are our stories of a year of struggle and finding our way forward. A project of YR Media in Oakland, The kNOw in Fresno, Boyle Heights Beat in Los Angeles, and Coachella Unincorporated in the Eastern Coachella Valley.',
   url: CAN_URL,
-  featureImage: `${CAN_URL}/images/header.jpg`,
+  featureImage: `${CAN_URL}/images/BOM-new-meta-img.jpg`,
   featureImagePath: 'images/feature',
   featureImageDescription:
     'We are young Californians. COVID has taken over our lives, and life choices. Behind our masks, our families changed; our paths changed; our futures changed. These are our stories of a year of struggle and finding our way forward. A project of YR Media in Oakland, The kNOw in Fresno, Boyle Heights Beat in Los Angeles, and Coachella Unincorporated in the Eastern Coachella Valley.',
