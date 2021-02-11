@@ -22,6 +22,10 @@
             </h3>
           </div>
           <div class="bt b--black bw4 pb3"></div>
+          <div
+            class="dn db-ns lh-copy f5 f4-ns reset-p-m"
+            v-html="header.text"
+          />
         </div>
         <ul class="ma0 pl0 ph3 pv3 list">
           <template v-for="article in articles">
@@ -154,6 +158,10 @@ export default {
     },
     activeStory: {
       type: String,
+      required: true,
+    },
+    header: {
+      type: Object,
       required: true,
     },
     footer: {

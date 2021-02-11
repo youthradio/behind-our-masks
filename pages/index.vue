@@ -4,6 +4,7 @@
       ref="menu"
       :active-story="activeStory"
       :articles="latest"
+      :header="articleData.main.introduction"
       :footer="articleData.main.footer"
     />
     <div class="grid-container relative">
@@ -14,6 +15,26 @@
       <div class="middle-grid-area">
         <div class="relative">
           <section class="center ph3 relative z-1">
+            <article class="pv4">
+              <div class="flex flex-column flex-row-ns">
+                <div class="w-30-ns pr2-ns">
+                  <h2
+                    :id="articleData.main.introduction.slug"
+                    ref="headline"
+                    class="mv0 lh-solid f4 f2-ns"
+                    v-html="articleData.main.introduction.title"
+                  ></h2>
+                </div>
+                <div class="w-70-ns pl2-ns">
+                  <main class="center">
+                    <div
+                      class="measure-wide lh-copy f5 f4-ns reset-p-m-ns"
+                      v-html="articleData.main.introduction.text"
+                    />
+                  </main>
+                </div>
+              </div>
+            </article>
             <template v-for="article in latest">
               <article :key="article.slug" class="pv4">
                 <div class="flex flex-column flex-row-ns">
