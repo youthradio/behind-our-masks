@@ -50,6 +50,19 @@ module.exports = {
       name: 'No Easy Choices: Stay in School or Pay the Rent?',
       id: '1BxDW9Cxh4E3hadmwtteLZvwjiCd0Bqmzk0GRwPTD2nY',
     },
+    {
+      name: 'Stuck in the Digital Divide',
+      id: '1xwn1hf7v4cj5djPwi7hpovw93l5OQbeS6LUa-0Pm2mM',
+    },
+    {
+      name: 'Organizing From Home: Pandemic Forces Activists to Adjust    ',
+      id: '1CvbJvjCK6d7JTZdFoz7XSBTwy9eCgtiT0Qo0UXVIe0Y',
+    },
+    {
+      name:
+        "'Everything's Just Up in the Air' Pandemic Stalls Football Season and Dreams",
+      id: '1mZmFYMYixrF8wY0a382d4iJ8eAFV8tT4lOdFkNs7Jww',
+    },
   ],
   dataPath: 'data/data.json',
   newsletter: {
