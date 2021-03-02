@@ -8,6 +8,7 @@
           allowfullscreen
           allowtransparency
           playsinline
+          loading="lazy"
         ></iframe>
       </div>
     </vue-plyr>
