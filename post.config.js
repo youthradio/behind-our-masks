@@ -63,6 +63,12 @@ module.exports = {
         "'Everything's Just Up in the Air' Pandemic Stalls Football Season and Dreams",
       id: '1mZmFYMYixrF8wY0a382d4iJ8eAFV8tT4lOdFkNs7Jww',
     },
+    {
+      id: '1FO4qXExKMNFHCgzyr_AyJj4U9TTtH2TIocPPsbyswEo',
+    },
+    {
+      id: '1jbNyPy4wxB3Wz6Ay31WyTdXhoSwKfGfdLIsAT5j496s',
+    },
   ],
   dataPath: 'data/data.json',
   newsletter: {
