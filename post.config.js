@@ -69,6 +69,8 @@ module.exports = {
     {
       id: '1jbNyPy4wxB3Wz6Ay31WyTdXhoSwKfGfdLIsAT5j496s',
     },
+    { id: '1JxfH9YfkT6LRYXt7LlEcC7gj4epu6srxVILMBh19q8g' },
+    { id: '15-F4gqQWg1ls7d9zqTrxtZB5nM93ocoR5D_eFohlxxE' },
   ],
   dataPath: 'data/data.json',
   newsletter: {
